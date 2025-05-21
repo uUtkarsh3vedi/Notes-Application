@@ -1,0 +1,43 @@
+/* SharedNotes.css */
+.shared-notes-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f9f9fb;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.shared-notes-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #2d2d42;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.shared-note-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.shared-note-card:hover {
+  box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+}
+
+.shared-note-title {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: #4d47a3;
+  font-weight: 600;
+}
+
+.shared-note-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
