@@ -6,18 +6,20 @@ const createNote = async (req, res) => {
     const { title, content, owner } = req.body;
 
     const user = await User.findById(owner);
-    if (!user)
-       return 
-      res.status(404).json({ message: "Owner not found" });
+    if (!user) {
+      return res.status(404).json({ message: "Owner not found" });  // Add return to stop execution
+    }
 
     const note = new Note({ title, content, owner });
     await note.save();
 
-    res.status(200).json({ message: "Note created successfully", note });
+    res.status(201).json({ message: "Note created", note });
   } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
   }
 };
+
 
 const getMyNote = async (req, res) => {
   try {
