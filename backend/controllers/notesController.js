@@ -4,6 +4,7 @@ const Note = require("../models/notesModel");
 const createNote = async (req, res) => {
   try {
     const { title, content, owner } = req.body;
+    console.log(req.body,"HALWA")
 
     const user = await User.findById(owner);
     if (!user) {

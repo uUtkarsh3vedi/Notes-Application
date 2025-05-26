@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "http://localhost:8000/api";
+import { BASE_URL } from "../constants";
 
 export const fetchMyNotes = async (userId, token) => {
   const res = await axios.get(`${BASE_URL}/notes/mine/${userId}`, {
